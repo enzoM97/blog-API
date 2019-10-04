@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="progweb" version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+	<servlet>
+		<servlet-name>blogservlet</servlet-name>
+		<servlet-class>servlets.BlogServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>blogservlet</servlet-name>
+		<url-pattern>/blog.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
