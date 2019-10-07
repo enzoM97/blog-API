@@ -1,6 +1,8 @@
 package beans;
-import structs.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User extends BaseBean {
 
 	private static final long serialVersionUID = 1L;
@@ -66,6 +68,18 @@ public class User extends BaseBean {
 	
 	public void setCompany(Company company) {
 		this.company = company;
+	}
+	
+	@Override
+	public String toString() {
+		return "user [\n" + " id: " + super.getId() + ",\n" + " name: " + name + ",\n" + " username: " + username + ",\n" 
+				+ " email: " + email + ",\n" + 
+				" address [\n" + "  street: " + address.getStreet() + ",\n" + "  suite: " + address.getSuite() + ",\n" + 
+				"  city: " + address.getCity() + ",\n" + "  zipcode: " + address.getZipCode() + ",\n" + 
+				"  geo: [\n" + "   lat: " + address.getGeo().getLat() + ",\n" + "   lng: " + address.getGeo().getLng() + ",\n" +
+				"  ],\n" + " ],\n" + " phone: " + phone + ",\n" + " website: " + website + ",\n" +
+				" company: [\n" + "  name: " + company.getName() + ",\n" + "  catchPhrase: " + company.getCatchPhrase() + ",\n" +
+				"  bs: " + company.getBs() + ",\n" + " " + "],\n" + "]";
 	}
 	
 }
