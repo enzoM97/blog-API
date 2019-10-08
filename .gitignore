@@ -1,2 +1,3 @@
 WebContent/WEB-INF/lib/
-build/
+build/classes/servlets/
+build/classes/
